@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>Create A Project!</h2>
+      <form role="form" action="createproject.php" method="POST">
+        <div class="form-group" >
+          <hr class="colorgraph">
+          <label for="projectname">Project Name</label>
+          <input type="projectname" name="projectname" class="form-control" id="projectname" placeholder="Enter name of your project">
+        </div>
+        <div class="form-group">
+          <label for="websiteurl">URL of Project Website</label>
+          <input type="websiteurl" name="websiteurl" class="form-control" id="websiteurl" placeholder="Enter Project Website URL">
+        </div>
+        <div class="form-group">
+          <label for="projectsummary">Summary of Project</label>
+          <textarea type="projectsummary" name= "projectsummary" class="form-control" id="projectsummary" placeholder="Enter a Short Summary of Your Project" rows="5"> </textarea>
+        </div>
+        <div class="form-group">
+          <p> Please choose the category of your project : </p>
+          <!-- reference: http://stackoverflow.com/questions/5031768/radio-buttons-with-php-form-handling-->
+          <label class="checkbox-inline">
+            <input type="radio" id="inlineCheckbox1" name="category" value="tech"> Technology
+          </label>
+          <label class="checkbox-inline">
+            <input type="radio" id="inlineCheckbox2" name="category" value="entertainment"> Entertainment
+          </label>
+          <label class="checkbox-inline">
+            <input type="radio" id="inlineCheckbox3" name="category" value="art"> Art
+          </label>
+          <label class="checkbox-inline">
+            <input type="radio" id="inlineCheckbox4" name="category" value="travel"> Travel
+          </label>
+        </div>
+        <div class="form-group">
+          <p> Is the project open ? </p>
+          <label class="checkbox-inline">
+            <input type="radio" id="inlineCheckbox1" name="status" value="open"> Yes
+          </label>
+          <label class="checkbox-inline">
+            <input type="radio" id="inlineCheckbox2" name="status" value="closed"> No
+          </label>
+        </div>
+        <hr class="colorgraph">
+        <button type="submit" class="btn btn-default">Next Step!</button>
+      </form>
+    </div>
+  </body>
+</html>
